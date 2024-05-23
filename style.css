@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #191919;
+ min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+font-family: "Nunito Sans", sans-serif;
+}
+
+.tooltip-container{
+    border: 1px solid #61DAFB;
+    width: 518px;
+    height: 237px;
+    border-radius: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+ }
+
+.tooltip-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    font-weight: 700;
+    font-size: 36px;
+    cursor: default;
+    position: relative;
+
+}
+
+.tooltip-icon img{
+    position: relative;
+    z-index: 10;
+}
+
+.express{
+    color: white;
+}
+ .mongodb{
+    color: #47A248;
+}
+
+ .react{
+    color: #61DAFB;
+}
+
+.nodejs{
+    color: #8CC84B;
+ }
+
+.tooltip{
+    width: 90px;
+    height: 35px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    top:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    margin-left: -5px;
+    color: black;
+    transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 6px 4px 0 black;
+}
+
+ .triangle{
+    width: 15px;
+    height: 6px;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 0;
+    background-color: inherit ;
+ }
+
+ .tooltip-icon:hover .tooltip{
+    opacity:1;
+    top: -45px;
+ }    
+
+.mongodb .tooltip{
+    background-color: #8CC84B;
+    color: white;
+ }
+
+ .express .tooltip{
+    background-color: white;
+ }
+
+ .react .tooltip{
+    background-color: #61DAFB;
+   
+ }
+ .nodejs .tooltip{
+    background-color: #8CC84B;
+ 
+ }
+
+@media (max-width:500px) {
+    .tooltip-container{
+        padding-inline: 16px;
+    }
+}
